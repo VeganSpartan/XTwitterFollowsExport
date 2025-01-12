@@ -1,0 +1,16 @@
+{
+  "manifest_version": 3,
+  "name": "X/Twitter Following export",
+  "version": "1.0",
+  "description": "Exports the list of users that you are following in X/Twitter social network and generates a JSON file.",
+  "permissions": ["scripting", "activeTab", "downloads"],
+  "host_permissions": ["https://x.com/*/following"],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icon.png",
+      "48": "icon.png",
+      "128": "icon.png"
+    }
+  }
+}
