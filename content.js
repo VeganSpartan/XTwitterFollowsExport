@@ -44,7 +44,7 @@
       if (prevHeight === currHeight) {
         retries += 1; // Increment attempt counter when no changes are detected
       } else {
-        retries = 0; // Reset the counter if we detect more data loaded
+        retries = 0; // Reset the counter if we detect more data loaded 
       }
     }
 
@@ -54,12 +54,19 @@
 
   const users = await scrollToEnd();
 
-  console.log("Creating file...");
-  const blob = new Blob([JSON.stringify(users, null, 2)], { type: 'application/json' });
-  const link = document.createElement('a');
-  link.href = URL.createObjectURL(blob);
-  link.download = 'twitter_following.json';
-  link.click();
+    console.log("Creating file...");
+    const blob = new Blob([JSON.stringify(users, null, 2)], { type: 'application/json' });
+    const url = URL.createObjectURL(blob);
 
-  alert(`Export complete. ${users.length} users have been exported.`);
+    const link = document.createElement('a');
+    link.href = url;
+    link.download = 'twitter_following.json';
+    document.body.appendChild(link);
+    link.click();
+
+    // Cleans object URL for releasing memory
+    URL.revokeObjectURL(url);
+    document.body.removeChild(link);
+
+    alert(`Export complete. ${users.length} users have been exported.`);
 })();
