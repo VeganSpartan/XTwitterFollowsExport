@@ -9,4 +9,4 @@ The extension is able to ignore X/Twitter accounts in the user bio (shown for ev
 CC Attribution:
 Icon image by Vectto (https://icon-icons.com/users/KcLhdbjKSLk8ff3CwuI9C/icon-sets/)
 
-You can use the extension in Chrome by setting the developer mode in extensions tab or add it from the Chrome Web Store (When available).
+You can use the extension in Chrome by setting the developer mode in extensions tab or add it from the Chrome Web Store (https://chromewebstore.google.com/detail/xtwitter-following-export/dbcfeaoiolldomhahoajoopacmgdcnhf?authuser=0&hl=es-419&pli=1).
